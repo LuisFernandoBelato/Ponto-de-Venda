@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="338.0" prefWidth="583.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.fipp.pedidosfx.CategoriaCadViewControler">
+    <children>
+        <Label text="ID">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfid" editable="false" prefHeight="2.0" prefWidth="543.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="10.0" />
+            </padding>
+        </TextField>
+        <Label layoutX="20.0" layoutY="20.0" text="Nome">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfnome" layoutX="20.0" layoutY="40.0" prefHeight="0.0" prefWidth="543.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" />
+            </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+        </TextField>
+        <Label layoutX="20.0" layoutY="87.0" text="Descrição">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfdesc" layoutX="20.0" layoutY="107.0" prefHeight="5.0" prefWidth="543.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" />
+            </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+        </TextField>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onConfirmar" prefHeight="57.0" prefWidth="119.0" style="-fx-background-color: lightblue;" text="Confirmar">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="327.0" layoutY="26.0" mnemonicParsing="false" onAction="#onCancelar" prefHeight="54.0" prefWidth="129.0" style="-fx-background-color: orange; -fx-border-radius: 200;" text="Cancelar">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

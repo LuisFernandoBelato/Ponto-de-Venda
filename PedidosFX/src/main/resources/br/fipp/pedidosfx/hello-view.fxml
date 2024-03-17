@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.fipp.pedidosfx.HelloController">
+   <top>
+      <VBox prefHeight="91.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar style="-fx-background-color: orange;">
+              <menus>
+                <Menu text="_CADASTROS">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onProdutos" text="PRODUTO..." />
+                        <MenuItem mnemonicParsing="false" onAction="#onClientes" text="CLIENTE..." />
+                        <MenuItem mnemonicParsing="false" onAction="#onCategorias" text="CATEGORIA..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem onAction="#onSair" text="_SAIR">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu text="_PEDIDOS">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onNovoPedido" text="NOVO" />
+                        <MenuItem mnemonicParsing="false" onAction="#onAbrirPedido" text="ABRIR" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="RELATÓRIOS">
+                    <items>
+                        <Menu mnemonicParsing="false" text="BÁSICOS">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#onRelClientes" text="CLIENTES" />
+                              <MenuItem mnemonicParsing="false" onAction="#onRelProdutos" text="PRODUTOS" />
+                          </items>
+                        </Menu>
+                      <MenuItem mnemonicParsing="false" onAction="#onRelPedidos" text="PEDIDOS" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="AJUDA">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onSobre" text="SOBRE" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="68.0" prefWidth="800.0" style="-fx-background-color: black;">
+              <items>
+                <Button mnemonicParsing="false" onAction="#onNovoPedido" prefHeight="43.0" prefWidth="46.0" style="-fx-background-image: url('carrinho.png'); -fx-background-position: center center; -fx-background-repeat: no-repeat;" />
+                  <Button layoutX="10.0" layoutY="17.0" mnemonicParsing="false" onAction="#onAbrirPedido" prefHeight="43.0" prefWidth="46.0"  style="-fx-background-image: url('LUPAPESQUISA.png'); -fx-background-position: center center; -fx-background-repeat: no-repeat;" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
